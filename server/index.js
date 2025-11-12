@@ -38,13 +38,6 @@ app.get("/testing", (req, res) => {
   })
 })
 
-// ✅ Helper: pick the safest browser
-const getBrowser = (details = "") => {
-  if (details.includes("chrome")) return "google-chrome";
-  if (details.includes("firefox")) return "firefox";
-  if (details.includes("brave")) return "brave-browser";
-  return "xdg-open"; // universal fallback
-};
 
 // ✅ Main route
 app.post("/ai-command", async (req, res) => {
@@ -53,11 +46,12 @@ app.post("/ai-command", async (req, res) => {
     console.log(`🧠 Received Command:`, command);
 
     // ⚡ Check custom commands first
-    const customResult = handleCustomCommand(command);
-    if (customResult) {
-      // Stop further processing if a custom command was executed
-      return res.json(customResult);
-    }
+    // const customResult = handleCustomCommand(command);
+    // console.log(customResult)
+    // if (customResult) {
+    //   // Stop further processing if a custom command was executed
+    //   return res.json(customResult);
+    // }
 
     // AI fallback
     const interpreted = await interpretUserCommand(command);

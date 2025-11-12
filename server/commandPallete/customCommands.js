@@ -1,28 +1,31 @@
-// customCommands.js
+import { openLatestLivestream } from "../controllers/customOperations/openLatestLivestream.js";
 
+// customCommands.js
 const customCommands = {
   "setup project": [
-    "code .", // open VS Code in current directory
-    "xdg-open https://github.com", // open GitHub
+    () => exec("code ."),
+    () => exec("xdg-open https://github.com"),
   ],
 
   "start work": [
-    "discord",
-    "spotify", 
+    () => exec("discord"),
+    () => exec("spotify"),
   ],
 
   "launch dev environment": [
-    "sudo systemctl start mongod",
-    "code ~/Projects/MyAPI",
-    "google-chrome http://localhost:3000",
+    () => exec("sudo systemctl start mongod"),
+    () => exec("code ~/Projects/MyAPI"),
+    () => exec("google-chrome http://localhost:3000"),
   ],
 
   "relax time": [
-    "spotify",
+    () => exec("spotify"),
   ],
+
   "open stream": [
-    'xdg-open https://www.youtube.com/@archon_g'
+    openLatestLivestream  // 🎯 directly call the imported function
   ]
 };
+
 
 export default customCommands

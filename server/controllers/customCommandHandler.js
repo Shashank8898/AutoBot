@@ -1,25 +1,30 @@
-// handleCustomCommand.js
-import customCommands from '../commandPallete/customCommands.js';
-import { exec } from 'child_process';
+import customCommands from "../commandPallete/customCommands.js";
+import { exec } from "child_process";
 
-export function handleCustomCommand(command) {
+export async function handleCustomCommand(command) {
     const lowerCmd = command.toLowerCase().trim();
 
-    if (!customCommands[lowerCmd]) return null; // not a custom command
-
-    const commandsToRun = customCommands[lowerCmd];
-    let executed = 0;
-
-    for (const cmd of commandsToRun) {
-        exec(cmd, (err, stdout, stderr) => {
-            if (err) console.error(`❌ Error executing: ${cmd}\n`, stderr);
-            else console.log(`✅ Ran: ${cmd}`);
-        });
-        executed++;
+    // If it's not a custom command, just return false (don’t stop anything)
+    if (!customCommands[lowerCmd]) {
+        return false;
     }
 
-    return {
-        success: true,
-        message: `Executed ${executed} custom command(s) for "${lowerCmd}"`,
-    };
+    const commandsToRun = customCommands[lowerCmd];
+
+    for (const cmd of commandsToRun) {
+        if (typeof cmd === "function") {
+            await cmd();  // run async functions like Puppeteer scripts
+        } else {
+            exec(cmd, (err, stdout, stderr) => {
+                if (err) {
+                    console.error(`❌ Error executing: ${cmd}`, stderr);
+                } else {
+                    console.log(`✅ Ran: ${cmd}`);
+                }
+            });
+        }
+    }
+
+    return true; // signal that a custom command was handled
 }
+
