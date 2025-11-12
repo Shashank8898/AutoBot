@@ -1,0 +1,163 @@
+const appMap = {
+  // 🧠 IDEs & Code Editors
+  vscode: "code",
+  "visual studio code": "code",
+  "vs code": "code",
+  sublime: "subl",
+  "sublime text": "subl",
+  atom: "atom",
+  "android studio": "studio.sh",
+  intellij: "idea.sh",
+  pycharm: "pycharm.sh",
+  discord: "discord &",
+  spotify: 'spotify &',
+  whatsapp: 'whatsapp-for-linux',
+  eclipse: "eclipse",
+  "brackets": "brackets",
+  "netbeans": "netbeans",
+
+  // 🌐 Browsers
+  chrome: "google-chrome",
+  "google chrome": "google-chrome",
+  firefox: "firefox",
+  brave: "brave-browser",
+  edge: "microsoft-edge",
+  chromium: "chromium-browser",
+  opera: "opera",
+
+  // 🖥️ Terminals & Shells
+  terminal: "gnome-terminal",
+  bash: "gnome-terminal",
+  zsh: "gnome-terminal",
+  shell: "gnome-terminal",
+  "vs code terminal": "code -n -a Terminal",
+
+  // 🧰 Developer Tools
+  postman: "postman",
+  insomnia: "insomnia",
+  docker: "docker",
+  "docker desktop": "docker",
+  "docker compose": "docker-compose",
+  kubernetes: "kubectl",
+  "k8s": "kubectl",
+  "virtualbox": "virtualbox",
+  vagrant: "vagrant",
+  terraform: "terraform",
+  "aws cli": "aws",
+  "gcloud": "gcloud",
+  "firebase cli": "firebase",
+  "ngrok": "ngrok",
+  "mongodb compass": "mongodb-compass",
+  mongodb: "mongosh",
+  mysql: "mysql",
+  redis: "redis-cli",
+  git: "git",
+  github: "xdg-open https://github.com",
+  bitbucket: "xdg-open https://bitbucket.org",
+  gitlab: "xdg-open https://gitlab.com",
+
+  // 🧪 Testing & Debugging
+  jest: "npm test",
+  cypress: "npx cypress open",
+  playwright: "npx playwright test",
+  mocha: "npx mocha",
+  vitest: "npx vitest",
+
+  // 📦 Package Managers
+  npm: "npm",
+  yarn: "yarn",
+  pnpm: "pnpm",
+  apt: "sudo apt",
+  snap: "snap",
+  pip: "pip3",
+
+  // 🧮 Text Editors
+  nano: "nano",
+  vim: "vim",
+  neovim: "nvim",
+  emacs: "emacs",
+  "gedit": "gedit",
+  "text editor": "gedit",
+
+  // 🧑‍💻 Communication & Collaboration
+  discord: "discord",
+  slack: "slack",
+  telegram: "telegram-desktop",
+  whatsapp: "whatsapp-for-linux",
+  zoom: "zoom",
+  teams: "teams-for-linux",
+  skype: "skypeforlinux",
+  notion: "notion-app",
+  obsidian: "obsidian",
+
+  // 🎵 Media & Productivity
+  spotify: "spotify",
+  vlc: "vlc",
+  "music player": "rhythmbox",
+  youtube: "xdg-open https://youtube.com",
+  netflix: "xdg-open https://netflix.com",
+  "google drive": "xdg-open https://drive.google.com",
+  gmail: "xdg-open https://mail.google.com",
+  calendar: "xdg-open https://calendar.google.com",
+  "google meet": "xdg-open https://meet.google.com",
+  zoomweb: "xdg-open https://zoom.us",
+  canva: "xdg-open https://canva.com",
+  figma: "xdg-open https://figma.com",
+  "pixlr": "xdg-open https://pixlr.com",
+  "photopea": "xdg-open https://photopea.com",
+  "capcut": "xdg-open https://www.capcut.com",
+
+  // 🗂️ File & System Operations
+  files: "nautilus",
+  explorer: "nautilus",
+  downloads: "xdg-open ~/Downloads",
+  desktop: "xdg-open ~/Desktop",
+  pictures: "xdg-open ~/Pictures",
+  documents: "xdg-open ~/Documents",
+  videos: "xdg-open ~/Videos",
+  "file manager": "nautilus",
+  "trash": "nautilus trash:///",
+  "terminal here": "gnome-terminal .",
+
+  // 🧠 AI / Chat Tools
+  chatgpt: "xdg-open https://chat.openai.com",
+  claude: "xdg-open https://claude.ai",
+  perplexity: "xdg-open https://www.perplexity.ai",
+  "github copilot": "xdg-open https://github.com/features/copilot",
+  "gemini": "xdg-open https://gemini.google.com",
+  "grok": "xdg-open https://x.com/i/grok",
+
+  // 🛠️ Utilities
+  calculator: "gnome-calculator",
+  calendarapp: "gnome-calendar",
+  settings: "gnome-control-center",
+  wifi: "gnome-control-center wifi",
+  bluetooth: "gnome-control-center bluetooth",
+  power: "gnome-control-center power",
+  display: "gnome-control-center display",
+  keyboard: "gnome-control-center keyboard",
+  sound: "gnome-control-center sound",
+  privacy: "gnome-control-center privacy",
+  appearance: "gnome-control-center appearance",
+  about: "gnome-control-center info-overview",
+
+  // ⚙️ System Commands
+  shutdown: "systemctl poweroff",
+  restart: "systemctl reboot",
+  lock: "gnome-screensaver-command -l",
+  logout: "gnome-session-quit --logout --no-prompt",
+  sleep: "systemctl suspend",
+  "system info": "hostnamectl",
+  "disk usage": "df -h",
+  "memory usage": "free -h",
+  "cpu info": "lscpu",
+  "uptime": "uptime",
+
+  // 📂 Code Folder Shortcuts (optional personalization)
+  "projects": "xdg-open ~/Desktop/VSCode/Projects",
+  "autobot": "xdg-open ~/Desktop/VSCode/Projects/AutoBot",
+  "nova": "xdg-open ~/Desktop/VSCode/Projects/NovaDesk",
+  "initio": "xdg-open ~/Desktop/VSCode/Projects/Initio",
+};
+
+export default appMap
